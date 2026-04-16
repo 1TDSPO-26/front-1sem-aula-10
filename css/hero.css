@@ -1,6 +1,12 @@
 .hero{
     background-color: var(--bg-dark-med);
     color: var(--text-main);
+}
+.hero .container{
+    background-image: url("../img/img-01-fundo-hero.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 2rem;
     
-
 }
