@@ -1,0 +1,14 @@
+.hero{
+    background-color: var(--bg-dark-med);
+    color: var(--text-main);
+}
+
+.hero_container{
+    background-image: url("../img/e5f6be11-e70c-48ae-ae6a-fb6704b59c12.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 2rem;
+
+    
+}
