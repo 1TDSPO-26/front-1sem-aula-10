@@ -18,14 +18,14 @@ body{
     background-color: #c9debc;
 
     display: flex;
-    flex-direction: column; 
+    flex-direction: row; 
     /* flex-direction: row-reverse; */
     /* flex-direction: column-reverse */
     flex-wrap: wrap;
     /* justify-content: center; */
     /* justify-content: space-around; */
     /* justify-content: space-between; */
-    justify-content: center; /* Alinamento Horizontal */
+    justify-content: space-evenly; /* Alinamento Horizontal */
     align-content: center; /* Alinhamento Vertical */
 
 }
