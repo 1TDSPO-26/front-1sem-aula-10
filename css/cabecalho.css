@@ -1,0 +1,5 @@
+.cabecalho__ul {
+    display: flex;
+    justify-content: space-around;
+    margin: 1%;
+}
