@@ -1,15 +1,19 @@
-//if / else if / else
+// switch
+// Use switch quando comparar uma variável contra múltiplos valores fixos. Mais legível que muitos else if encadeados.
+const diaSemana = "segunda";
 
-const nota = 72;
- 
-if (nota >= 90) {
-    console.log("Aprovado com distinção");
-} else if (nota >= 60) {
-    console.log("Aprovado");
-} else {
-    console.log("Reprovado");
+switch (diaSemana) {
+  case "segunda":
+  case "terça":
+  case "quarta":
+  case "quinta":
+  case "sexta":
+    console.log("Dia útil");
+    break;
+  case "sábado":
+  case "domingo":
+    console.log("Fim de semana!");
+    break;
+  default:
+    console.log("Dia inválido");
 }
- 
-// Operador ternário (if/else em uma linha):
-const resultado = nota >= 60 ? (nota < 90 && nota >= 70 ? "Aprovado" : "de Recuperação") : "Reprovado";
-console.log(`O aluno está ${resultado}.`);
