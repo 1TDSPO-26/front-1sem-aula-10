@@ -8,7 +8,15 @@ body{
     font-family: Arial, sans-serif;
     width: 100vw;
     height: 100vh;
+<<<<<<< HEAD
     background-color: #1a1b1c;
+=======
+<<<<<<< HEAD
+    background-color: #0d0d0e;
+=======
+    background-color: #1a1b1c;
+>>>>>>> feat/pf0670-exemplos
+>>>>>>> origin/main
     color: #e0e0e0;
 }
 
@@ -16,23 +24,49 @@ body{
     border: 1px solid #fff;
     width: 100%;
     height: 100%;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    display: grid;
+    grid-template-columns: repeat(3, 300px);
+    grid-template-rows: repeat(4, 200px);
+=======
+>>>>>>> origin/main
 
     display: grid;
     grid-template-columns: repeat(3, 300px);
     grid-template-rows: repeat(4,200px);
+<<<<<<< HEAD
+=======
+>>>>>>> feat/pf0670-exemplos
+>>>>>>> origin/main
     justify-content: start;
     align-content: start;
 
 }
 
 .item{
+<<<<<<< HEAD
     background-color: #d8c40e;
+=======
+    background-color: #556b2f;
+<<<<<<< HEAD
+    color:#fff;
+    padding: 4.5;
+    border: 1px solid #fff;
+    text-align: center;
+    width: 90px;
+    height: 50px;
+
+=======
+>>>>>>> origin/main
     color: #fff;
     padding: 4.5%;
     border: 1px solid #fff;
     text-align: center;
     width: 150px;
     height: 50px;
+<<<<<<< HEAD
 }       
 
 .container :nth-child(12){
@@ -59,3 +93,46 @@ body{
     justify-self: justify;
     background-color: lightblue;
 }
+=======
+>>>>>>> feat/pf0670-exemplos
+}
+
+.container :nth-child(1){
+    align-self: center;
+    justify-self: center;
+<<<<<<< HEAD
+    background-color: #7c0909
+=======
+    background-color: aqua;
+>>>>>>> feat/pf0670-exemplos
+}
+
+.container :nth-child(5){
+    align-self: center;
+    justify-self: center;
+<<<<<<< HEAD
+    background-color: #7c0909
+=======
+    background-color: aqua;
+>>>>>>> feat/pf0670-exemplos
+}
+
+.container :nth-child(9){
+    align-self: center;
+    justify-self: center;
+<<<<<<< HEAD
+    background-color: #7c0909
+}
+
+.container :nth-child(2):hover{
+    background-color: #7c0909
+}
+=======
+    background-color: aqua;
+}
+
+.container :nth-child(2):hover {
+    background-color: red;  
+}
+>>>>>>> feat/pf0670-exemplos
+>>>>>>> origin/main
