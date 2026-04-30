@@ -6,10 +6,10 @@
 
 
 
-let.nome = "Oto";
-let.idade = 100;
-const.cidade_atual = "São Paulo-SP";
-const.cidade_origem = "São Luís-MA";
+let nome = "Oto";
+let idade = 100;
+const cidade_atual = "São Paulo-SP";
+const cidade_origem = "São Luís-MA";
 
 
 console.log(`Meu nome é ${nome}, tenho ${idade} anos e moro em ${cidade} mas sou de ${cidade_origem}.`);
