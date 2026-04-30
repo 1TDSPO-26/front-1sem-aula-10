@@ -4,11 +4,19 @@ const diaSemana = "segunda";
 
 switch (diaSemana) {
   case "segunda":
-  case "terça":
-  case "quarta":
-  case "quinta":
-  case "sexta":
     console.log("Dia útil");
+    break;
+  case "terça":
+    console.log("Dia útil");
+    break;
+  case "quarta":
+    console.log("Dia útil");
+    break;
+  case "quinta":
+    console.log("Dia útil");
+    break;
+  case "sexta":
+    console.log("Feriado!!!");
     break;
   case "sábado":
   case "domingo":
