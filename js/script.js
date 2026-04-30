@@ -12,3 +12,4 @@ if (nota >= 90) {
  
 // Operador ternário (if/else em uma linha):
 const resultado = nota >= 60 ? "Aprovado" : "Reprovado";
+console.log(`O aluno foi ${resultado}.`);
