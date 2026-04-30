@@ -88,20 +88,70 @@
 //	Calcule a área de um retângulo. Armazene base e altura em const. Exiba o resultado com console.log.
 //	Teste a diferença entre == e ===: compare o número 0 com a string "0" das duas formas.
 
-let nome = "Roberto"
-const idade = "23"
-const cidade = "São Paulo"
-console.log(`Olá, ${nome}! Você tem ${idade} anos. Mora em ${cidade}`)
+// let nome = "Roberto"
+// const idade = "23"
+// const cidade = "São Paulo"
+// console.log(`Olá, ${nome}! Você tem ${idade} anos. Mora em ${cidade}`)
 
-typeof nome;
-typeof idade
-typeof cidade
-typeof true
+// typeof nome;
+// typeof idade
+// typeof cidade
+// typeof true
 
-let base = "10"
-let lado = "20"
-const area = base * lado
-console.log(`A area do retangulo é: ${area}`)
+// let base = "10"
+// let lado = "20"
+// const area = base * lado
+// console.log(`A area do retangulo é: ${area}`)
 
-console.log(0 == "0")
-console.log(0 === "0")
+// console.log(0 == "0")
+// console.log(0 === "0")
+
+const nota = 72;
+ 
+if (nota >= 90) {
+    console.log("Aprovado com distinção");
+} else if (nota >= 60) {
+    console.log("Aprovado");
+} else {
+    console.log("Reprovado");
+}
+ 
+// Operador ternário (if/else em uma linha):
+const resultado = nota >= 60 ? "Aprovado" : "Reprovado";
+
+// switch
+// Use switch quando comparar uma variável contra múltiplos valores fixos. Mais legível que muitos else if encadeados.
+const diaSemana = "segunda";
+
+switch (diaSemana) {
+  case "segunda":
+    console.log("Dia útil e trabalho");
+    break;
+  case "terça":
+    console.log("Dia útil e dia de aula");
+    break;
+  case "quarta":
+    console.log("Dia útil e dia de feira");
+    break;
+  case "quinta":
+    console.log("Dia útil e dia de festa");
+    break;
+  case "sexta":
+    console.log("Feriado!!!");
+    break;
+  case "sábado":
+    console.log("Fim de semana!");
+    break;
+  case "domingo":
+    console.log("Fim de semana!");
+    break;
+  default:
+    console.log("Dia inválido");
+}
+
+// Nunca esqueça o break! Sem ele o JS continua executando os cases seguintes (fall-through).
+// EXERCÍCIO — Módulo 2
+// •	Crie um verificador de faixa etária: "criança" (< 12), "adolescente" (12–17), "adulto" (18–59), "idoso" (60+).
+// •	Simule um semáforo com switch: verde, amarelo, vermelho → imprima a instrução correspondente.
+// •	Crie um mini-calculadora: peça dois números e uma operação (+, -, *, /) e exiba o resultado.
+
