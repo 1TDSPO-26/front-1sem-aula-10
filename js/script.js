@@ -1,16 +1,29 @@
-// Tipos de dados
-// string  — Textos e caracteres  →  "texto"  ou  'texto'  ou  `template`
-// number  — Inteiros e decimais (um só tipo)  →  42  /  3.14  /  -7
-// boolean  — Verdadeiro ou falso  →  true  /  false
-// null  — Ausência intencional de valor  →  null
-// undefined  — Variável declarada sem valor  →  undefined
-// object  — Coleções e estruturas complexas  →  { nome: 'Ana' }  /  [1, 2, 3]
+// Operadores
+// Aritméticos:
+//     + : Adição
+//     - : Subtração
+//     * : Multiplicação
+//     / : Divisão
+//     % : Módulo (resto da divisão)
+//      : Exponenciação
+// Comparação:
+//     === : Igualdade estrita (mesmo valor e tipo)
+//     !== : Desigualdade estrita (valor ou tipo diferente)
+//     > : Maior que
+//     < : Menor que
+//     >= : Maior ou igual a
+//     <= : Menor ou igual a
+// Lógicos:
+//     && : E (AND)
+//     || : OU (OR)
+//     ! : NÃO / Negação (NOT)
 
-// typeof revela o tipo de qualquer valor:
-typeof "olá"       // "string"
-typeof 42          // "number"
-typeof true        // "boolean"
-typeof null        // "object"  ← bug histórico do JS!
-typeof undefined   // "undefined"
-typeof {}          // "object"
+// Atenção: == vs ===
+5 == "5"   // true  (compara só valor, converte tipo)
+5 === "5"  // false (compara valor E tipo) ← sempre use ===
+ 
+// Operador lógico prático:
+const usuarioLogado = false;
+const mensagem = usuarioLogado || "Visitante";
+console.log(mensagem); // "Visitante"
 
