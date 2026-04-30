@@ -5,18 +5,18 @@
 //	Teste a diferença entre == e ===: compare o número 0 com a string "0" das duas formas.
 
 
-const nome = "Morgan";
-let idade = 25;
+let nome = "Thales";
+let idade = 18;
 const cidade = "São Paulo";
 
-console.log("Meu nome é ${nome}, tenho ${idade} anos e moro em ${cidade}.");
+console.log(`Nome: ${nome}, Idade: ${idade} Cidade: ${cidade}.`);
 
-console.log(typeof "texto");
+console.log(typeof nome);
+console.log(typeof idade);
+console.log(typeof cidade);
 console.log(typeof 10);
-console.log(typeof true);
-console.log(typeof null);
 
 const base = 10;
 const altura = 5;
 const area = base * altura;
-console.log("A área do retângulo é: ${area}");
+console.log(`A área do retângulo é: ${area}`);
