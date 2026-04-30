@@ -98,10 +98,10 @@ let idade = 18;
 const cidade = "São Paulo";
 console.log(`Meu nome é ${nome}, tenho ${idade} anos e moro em ${cidade}`)
 
-console.log(typeof "Hello, World");
-console.log(typeof 20);          
+console.log(typeof nome);
+console.log(typeof idade);          
+console.log(typeof cidade);
 console.log(typeof true);        
-console.log(typeof null);
 
 let base = 5;
 const altura = 3;
