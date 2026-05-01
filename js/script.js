@@ -22,3 +22,48 @@ switch (true) {
     default:
         console.log("Idade inválida");
 }
+
+let semaforo = console.log("Digite a cor do semáforo: verde, amarelo ou vermelho"); //pesquisar se isso está correto?
+// //entender como se faz o print ln para buscar uma resposta do usuário, talvez com prompt() ou algo do tipo. Imagino que seja assim...
+
+switch (semaforo) {
+    case "verde":
+        console.log("Siga em frente");
+        break;
+    case "amarelo":
+        console.log("Atenção, prepare-se para parar");
+        break;
+    case "vermelho":
+        console.log("Pare");
+        break;
+    default:
+        console.log("Cor de semáforo inválida");
+}
+//também entender como solicitar as variáveis ao usuário...
+let num1 = 10; //let num1 = console.log("Digite o primeiro número:");
+let num2 = 5; //let num2 = console.log("Digite o segundo número:");
+let operacao = "+"; //let operacao = console.log("Digite a operação (+, -, *, /):");
+let resultado = 0; //funciona igual aqui? Deixar zerado e depois atribuir o resultado da operação? Ou criar a espera dos inputs?
+
+switch (operacao) {
+    case "+":
+        resultado = num1 + num2;
+        break;
+    case "-":
+        resultado = num1 - num2;
+        break;
+    case "*":
+        resultado = num1 * num2;
+        break;
+    case "/":
+        if (num2 !== 0) {
+            resultado = num1 / num2;
+        } else {
+            resultado = "Erro: Divisão por zero";
+        }
+        break;
+    default:
+        resultado = "Operação inválida";
+}
+
+console.log(`Resultado: ${resultado}`); 
