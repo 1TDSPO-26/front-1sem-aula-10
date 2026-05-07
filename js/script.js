@@ -23,6 +23,27 @@ switch (true) {
         console.log("Idade inválida");
 }
 
+
+let idade=25
+if (idade < 12) {
+    console.log("Criança");
+}
+else if (idade >= 12 && idade <= 17) {
+    console.log("Adolescente");
+}
+else if (idade >= 18 && idade <= 59) {
+    console.log("Adulto");
+}
+else if (idade >= 60) {
+    console.log("Idoso");
+}
+else {
+    console.log("Idade inválida");
+}
+
+
+
+
 let semaforo = console.log("Digite a cor do semáforo: verde, amarelo ou vermelho"); //pesquisar se isso está correto?
 // //entender como se faz o print ln para buscar uma resposta do usuário, talvez com prompt() ou algo do tipo. Imagino que seja assim...
 
