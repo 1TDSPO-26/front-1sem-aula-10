@@ -1,36 +1,49 @@
-// switch
-// Use switch quando comparar uma variável contra múltiplos valores fixos. Mais legível que muitos else if encadeados.
-const diaSemana = "segunda";
+//Recuperando o botao entrar 
 
-switch (diaSemana) {
-  case "segunda":
-    console.log("Dia útil e trabalho");
-    break;
-  case "terça":
-    console.log("Dia útil e dia de aula");
-    break;
-  case "quarta":
-    console.log("Dia útil e dia de feira");
-    break;
-  case "quinta":
-    console.log("Dia útil e dia de festa");
-    break;
-  case "sexta":
-    console.log("Feriado!!!");
-    break;
-  case "sábado":
-    console.log("Fim de semana!");
-    break;
-  case "domingo":
-    console.log("Fim de semana!");
-    break;
-  default:
-    console.log("Dia inválido");
+const usuario = {
+    email:theo.email
+    senha:theo.senha 
 }
 
-// Nunca esqueça o break! Sem ele o JS continua executando os cases seguintes (fall-through).
-// EXERCÍCIO — Módulo 2
-// •	Crie um verificador de faixa etária: "criança" (< 12), "adolescente" (12–17), "adulto" (18–59), "idoso" (60+).
-// •	Simule um semáforo com switch: verde, amarelo, vermelho → imprima a instrução correspondente.
-// •	Crie um mini-calculadora: peça dois números e uma operação (+, -, *, /) e exiba o resultado.
+const botaoentrar = document.getElementById("btnEntrar");
 
+//Atrelar ao botao um evento 
+//Vamos utilizar uma funcao que escuta eventos 
+//Essa funcao se chama addEventListener(param1,param2) e recebe dois parametros:
+//O pri meir oe o evento em si(click ou outro qualquer)
+//O segundo e a funcao, que pode ser uma funcao anonima ou uma funcao declarada
+//que sera executada quando o evento ocorrer 
+
+//EX: botaoEntrar.addEventListener("click", function(){});
+
+botaoentrar.addEventListener("click", function(){});
+
+botaoEntrar.addEventListener("click", function(evento){
+  evento.preventDefault();
+try {
+    
+    //Recuperando os 2 campos do formulário de login e imprimir no console:
+   const email = document.getElementById("idEmail");
+   const senha = document.getElementById("idSenha");
+
+   //Imprimindo o valor dos campos em tela.
+   console.log(email.value);
+   console.log(senha.value);
+
+   //Vamos comparar os dados digitados no formulário com os dados do objeto "usuario" e caso seja valido, redirecionar para a página index.html.
+
+
+   if(!(email === null && senha === null )){
+    if(email.value === usuario.email && senha.valeu === usuario.senha){
+        window.location.href = ".index/html";
+    } else {
+        throw new error("Email ou senha invalidos")
+    }
+   }
+  
+} catch (error) {
+
+
+
+
+});
