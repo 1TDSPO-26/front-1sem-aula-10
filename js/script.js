@@ -23,8 +23,6 @@ else {
 }
 
 
-
-
 let semaforo = "vermelho";
 
 switch (semaforo) {
@@ -40,31 +38,27 @@ switch (semaforo) {
     default:
         console.log("Cor de semáforo inválida");
 }
-//também entender como solicitar as variáveis ao usuário...
+
 let num1 = 10; //let num1 = console.log("Digite o primeiro número:");
 let num2 = 5; //let num2 = console.log("Digite o segundo número:");
 let operacao = "+"; //let operacao = console.log("Digite a operação (+, -, *, /):");
-let resultado = 0; //funciona igual aqui? Deixar zerado e depois atribuir o resultado da operação? Ou criar a espera dos inputs?
 
 switch (operacao) {
     case "+":
-        resultado = num1 + num2;
-        break;
+      console.log(num1 + num2);
+      break;
     case "-":
-        resultado = num1 - num2;
-        break;
+      console.log(num1 - num2);
+      break;
     case "*":
-        resultado = num1 * num2;
-        break;
+      console.log(num1 * num2);
+      break;                        
     case "/":
-        if (num2 !== 0) {
-            resultado = num1 / num2;
-        } else {
-            resultado = "Erro: Divisão por zero";
-        }
-        break;
+      const resultado = num2 !== 0 ? num1 / num2 : "Erro: Divisão por zero";
+      console.log(resultado);
+      break;
     default:
-        resultado = "Operação inválida";
+      console.log("Operação inválida");
 }
 
 console.log(`Resultado: ${resultado}`); 
