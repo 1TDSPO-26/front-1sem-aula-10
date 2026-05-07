@@ -1,20 +1,51 @@
-let nome = "Allex";
-let idade = 21;
-const cidade = "São Bernardo do Campo";
+let idade = 17
 
-console.log(`Meu nome é ${nome}, tenho ${idade} anos e moro em ${cidade}.`);
-
-console.log(typeof nome);      
-console.log(typeof idade);     
-console.log(typeof true);      
-
-
-const base = 8;
-const altura = 4;
-const area = base * altura;
-
-console.log(`area: ${area}.`);
+if(idade < 12){
+    console.log("Crianca")
+}else if(idade >= 12 && idade <= 17){
+    console.log("Adolescente")
+}else if(idade >= 18 && idade <= 59){
+    console.log("Adulto")
+}else{
+    console.log("Idoso")
+}
 
 
-console.log(0 == "0");   
-console.log(0 === "0");  
+let semaforo = "vermelho";
+
+switch(semaforo){
+  case "verde":
+    console.log("Siga");
+    break;
+  case "amarelo":
+    console.log("Atenção");
+    break;
+  case "vermelho":
+    console.log("Pare");
+    break;
+  default:
+    console.log("Semáforo inválido");
+}
+
+
+// let nr1 = 10;
+// let nr2 = 20;
+// let operacao = "x";
+
+// switch(operacao){
+//   case "+":
+//     console.log(nr1 + nr2);
+//     break;
+//   case "-":
+//     console.log(nr1 - nr2);
+//     break;  
+//   case "*":
+//     console.log(nr1 * nr2);
+//     break;
+//   case "/":
+//     const resultado = nr2 !== 0 ? nr1 / nr2 : "Erro divisão por zero.";
+//     console.log(resultado);
+//     break;
+//   default:
+//     console.log("Operação inválida!");
+// }
