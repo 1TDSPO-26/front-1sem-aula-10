@@ -5,6 +5,29 @@ const usuario = {
   senha: "123456",
 };
 
+//Criando uma lista de objetos para comparar com os dados do formulário:
+const arrayDeCoisas = ["Saab", "Volvo", "BMW", 1, null, {nome:"Ale",idade:50}];
+console.log(arrayDeCoisas);
+
+console.log(arrayDeCoisas[0]);
+console.log(arrayDeCoisas[1]);
+console.log(arrayDeCoisas[2]);
+console.log(arrayDeCoisas[3]);
+console.log(arrayDeCoisas[4]);
+console.log(arrayDeCoisas[5]);
+console.log(arrayDeCoisas[5].nome);
+console.log(arrayDeCoisas[5].idade);
+
+//Imprimindo um objeto
+console.log(usuario);
+console.log(usuario.nome);
+console.log(usuario.email);
+console.log(usuario.senha);
+
+
+
+
+
 //Recuperando o botão entrar
 const botaoEntrar = document.getElementById("btnEntrar");
 
@@ -31,6 +54,10 @@ botaoEntrar.addEventListener("click", function (evento) {
 
     //Vamos comparar os dados digitados no formulário com os dados do objeto "usuario" e caso seja valido, redirecionar para a página index.html.
 
+//Refatorar a validação de usuários para que ao invés de comparar o email e a senha contra um único usuário, comparar com uma lista de usuários.
+//Para isso, você deve criar um array com objetos contendo os dados do usuário.
+
+
     if (!(email === null && senha === null)) {
       if (email.value === usuario.email && senha.value === usuario.senha) {
         window.location.href = "./index.html";
@@ -40,7 +67,7 @@ botaoEntrar.addEventListener("click", function (evento) {
     } else {
       throw new Error("Preencha os campos corretamente!");
     }
-    
+
   } catch (error) {
     alert(error.message);
   }
