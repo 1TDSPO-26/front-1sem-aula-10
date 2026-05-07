@@ -1,0 +1,8 @@
+.form__input:valid:not(:placeholder-shown) {
+    border: 2px solid green;
+}    
+
+.form__input:invalid:not(:placeholder-shown){
+    border: 2px solid red;
+
+}
