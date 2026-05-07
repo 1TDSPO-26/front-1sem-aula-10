@@ -1,7 +1,21 @@
+<<<<<<< HEAD
 .cabecalho_ul{
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     margin: 1%;
 
+=======
+<<<<<<< HEAD
+.cabecalho__ul{
+    display: flex;
+=======
+
+.cabecalho__ul{
+    display:flex;
+>>>>>>> feat/pf0670-exemplos
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 1%;
+>>>>>>> main
 }

@@ -1,5 +1,6 @@
 .main-sections{
     width: 100%;
+<<<<<<< HEAD
     height: 100%;
     background-color: #1a1b1c;
     color: #e0e0e0;
@@ -7,4 +8,10 @@
 
     grid-template-columns: repeat(3, 1fr);
     
+=======
+    background-color: #1a1b1c;
+    color: #e0e0e0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);    
+>>>>>>> main
 }
