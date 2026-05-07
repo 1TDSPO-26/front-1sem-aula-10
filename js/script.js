@@ -33,3 +33,4 @@ switch (diaSemana) {
 // •	Crie um verificador de faixa etária: "criança" (< 12), "adolescente" (12–17), "adulto" (18–59), "idoso" (60+).
 // •	Simule um semáforo com switch: verde, amarelo, vermelho → imprima a instrução correspondente.
 // •	Crie um mini-calculadora: peça dois números e uma operação (+, -, *, /) e exiba o resultado.
+
