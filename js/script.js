@@ -51,3 +51,56 @@ switch (diaSemana) {
 // •	Simule um semáforo com switch: verde, amarelo, vermelho → imprima a instrução correspondente.
 // •	Crie um mini-calculadora: peça dois números e uma operação (+, -, *, /) e exiba o resultado.
 
+
+//exercício 1
+let idade = 25;
+
+if(idade < 12){
+  console.log("Criança");
+}else if(idade >= 12 && idade <= 17){
+  console.log("Adolescente");
+}else if(idade >= 18 && idade <= 59){
+  console.log("Adulto");
+}else{
+  console.log("Idoso");
+}
+
+//exercício 2
+let semaforo = "verde";
+
+switch(semaforo){
+  case "verde":
+    console.log("Siga");
+    break;
+  case "amarelo":
+    console.log("Atenção");
+    break;
+  case "vermelho":
+    console.log("Pare");
+    break;
+  default:
+    console.log("Semáforo com defeito!");
+}
+
+//exercício 3
+let nr1 = 10;
+let nr2 = 20;
+let operacao = "+";
+
+switch(operacao){
+  case "+":
+    console.log(nr1 + nr2);
+    break;
+  case "-":
+    console.log(nr1 - nr2);
+    break;  
+  case "*":
+    console.log(nr1 * nr2);
+    break;
+  case "/":
+    const resultado = nr2 !== 0 ? nr1 / nr2 : "Erro divisão por zero";
+    console.log(nr1 / nr2);
+    break;
+  default:
+    console.log("Operação inválida!");
+}
