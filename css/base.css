@@ -44,18 +44,11 @@ body{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     width: 100vw;
     height: 100vh;
-<<<<<<< HEAD
-
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-=======
     
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 
->>>>>>> main
 }
 
 ul{
@@ -69,9 +62,4 @@ a{
 
 main{
     width: 100%;
-}
-
-ul{
-    display: flex;
-    justify-content: flex-end;
 }
