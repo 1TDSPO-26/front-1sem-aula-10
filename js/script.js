@@ -5,25 +5,6 @@
 //Simule um semáforo com switch: verde, amarelo, vermelho → imprima a instrução correspondente.
 //Crie um mini-calculadora: peça dois números e uma operação (+, -, *, /) e exiba o resultado.
 
-let idade_individuo = 25;
-switch (true) {
-    case (idade_individuo < 12):
-        console.log("Criança");
-        break;
-    case (idade_individuo >= 12 && idade_individuo <= 17):
-        console.log("Adolescente");
-        break;
-    case (idade_individuo >= 18 && idade_individuo <= 59):
-        console.log("Adulto");
-        break;
-    case (idade_individuo >= 60):
-        console.log("Idoso");
-        break;
-    default:
-        console.log("Idade inválida");
-}
-
-
 let idade=25
 if (idade < 12) {
     console.log("Criança");
@@ -34,7 +15,7 @@ else if (idade >= 12 && idade <= 17) {
 else if (idade >= 18 && idade <= 59) {
     console.log("Adulto");
 }
-else if (idade >= 60) {
+else (idade >= 60) {
     console.log("Idoso");
 }
 else {
@@ -44,8 +25,7 @@ else {
 
 
 
-let semaforo = console.log("Digite a cor do semáforo: verde, amarelo ou vermelho"); //pesquisar se isso está correto?
-// //entender como se faz o print ln para buscar uma resposta do usuário, talvez com prompt() ou algo do tipo. Imagino que seja assim...
+let semaforo = "vermelho";
 
 switch (semaforo) {
     case "verde":
