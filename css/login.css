@@ -1,0 +1,8 @@
+.form_inpput:valid:not(:placeholder-shown) {
+    border: 2px solid green;
+}
+
+
+.form_inpput:invalid:not(:placeholder-shown) {
+    border: 2px solid red;
+}
