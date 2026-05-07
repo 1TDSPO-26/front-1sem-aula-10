@@ -27,3 +27,54 @@ console.log(`O resultado é: ${base*altura}`);
 console.log(typeof 0 === "0")
 
 console.log(typeof 0 == "0")
+
+
+let idade = 25
+
+if (idade < 12) {
+    console.log("Criança");
+} else if (idade >= 12 && idade <= 17) {
+    console.log("Adolescente");
+} else if (idade >= 18 && idade <= 59) {
+    console.log("Adulto");
+} else {
+    console.log("Idoso");
+}
+
+let semaforo = "vermelho"
+
+switch (semaforo) {
+    case "verde":
+        console.log("Siga");
+        break;
+    case "amarelo":
+        console.log("Atenção");
+        break;
+    case "vermelho":
+        console.log("Pare");
+        break;
+    default:
+        console.log("Semáforo inválido");
+}
+
+let nr1 = 10;
+let nr2 = 20;
+let operacao = "+"
+
+switch (operacao) {
+    case "+":
+        console.log(`O resultado da soma é: ${nr1 + nr2}`);
+        break;
+    case "-":
+        console.log(`O resultado da subtração é: ${nr1 - nr2}`);
+        break;
+    case "*":
+        console.log(`O resultado da multiplicação é: ${nr1 * nr2}`);
+        break;
+    case "/":
+        const resultado = nr2 !== 0 ? nr1 / nr2 : "Erro: Divisão por zero";
+        console.log(`O resultado da divisão é: ${resultado}`);
+        break;
+    default:
+        console.log("Operação inválida");
+}
