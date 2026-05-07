@@ -1,80 +1,74 @@
-// EXERCÍCIO — Módulo 1
-//  Declare três variáveis (nome, idade, cidade) com let e const. Imprima uma frase com template literal.
-//  Use typeof para verificar o tipo de pelo menos 4 valores diferentes.
-//  Calcule a área de um retângulo. Armazene base e altura em const. Exiba o resultado com console.log.
-//  Teste a diferença entre == e ===: compare o número 0 com a string "0" das duas formas.
+//Montando um objeto para comparar com os dados do formulário
+const usuario = {
+  nome: "Zezinho",
+  email: "zezinho@gmail.com",
+  senha: "123456",
+};
 
-const nome = "Alexandre";
-let idade = 18;
-let cidade = "São Paulo";
-let height = 1.82;
+//Criando uma lista de objetos para comparar com os dados do formulário:
+const arrayDeCoisas = ["Saab", "Volvo", "BMW", 1, null, {nome:"Ale",idade:50}];
+console.log(arrayDeCoisas);
 
-console.log(`Olá! Meu nome é ${nome}, tenho ${idade} anos e atualmente moro em ${cidade}`);
+console.log(arrayDeCoisas[0]);
+console.log(arrayDeCoisas[1]);
+console.log(arrayDeCoisas[2]);
+console.log(arrayDeCoisas[3]);
+console.log(arrayDeCoisas[4]);
+console.log(arrayDeCoisas[5]);
+console.log(arrayDeCoisas[5].nome);
+console.log(arrayDeCoisas[5].idade);
 
-console.log(typeof nome);
-console.log(typeof idade);
-console.log(typeof cidade);
-console.log(typeof height);
-
-
-
-const altura = 2
-const base = 10
-
-console.log(`O resultado é: ${base*altura}`);
-
-
-console.log(typeof 0 === "0")
-
-console.log(typeof 0 == "0")
+//Imprimindo um objeto
+console.log(usuario);
+console.log(usuario.nome);
+console.log(usuario.email);
+console.log(usuario.senha);
 
 
-let idade = 25
 
-if (idade < 12) {
-    console.log("Criança");
-} else if (idade >= 12 && idade <= 17) {
-    console.log("Adolescente");
-} else if (idade >= 18 && idade <= 59) {
-    console.log("Adulto");
-} else {
-    console.log("Idoso");
-}
 
-let semaforo = "vermelho"
 
-switch (semaforo) {
-    case "verde":
-        console.log("Siga");
-        break;
-    case "amarelo":
-        console.log("Atenção");
-        break;
-    case "vermelho":
-        console.log("Pare");
-        break;
-    default:
-        console.log("Semáforo inválido");
-}
+//Recuperando o botão entrar
+const botaoEntrar = document.getElementById("btnEntrar");
 
-let nr1 = 10;
-let nr2 = 20;
-let operacao = "+"
+//Atrelar ao botão um evento
+//Vamos utilizar uma função que escuta eventos.
+//Essa função se chama addEventListener(param1, param2) e recebe dois parâmetros:
+//O primeiro é o evento em si (click ou outro qualquer).
+//O segundo é a função, que pode ser uma função anônima ou uma função declarada.
+//Que será executada quando esse evento acontecer.
 
-switch (operacao) {
-    case "+":
-        console.log(`O resultado da soma é: ${nr1 + nr2}`);
-        break;
-    case "-":
-        console.log(`O resultado da subtração é: ${nr1 - nr2}`);
-        break;
-    case "*":
-        console.log(`O resultado da multiplicação é: ${nr1 * nr2}`);
-        break;
-    case "/":
-        const resultado = nr2 !== 0 ? nr1 / nr2 : "Erro: Divisão por zero";
-        console.log(`O resultado da divisão é: ${resultado}`);
-        break;
-    default:
-        console.log("Operação inválida");
-}
+//Ex: botaoEntrar.addEventListener("click", function(){ Coisas aqui dentro da função para serem executadas quando o botão for clicado. });
+
+botaoEntrar.addEventListener("click", function (evento) {
+  evento.preventDefault();
+
+  try {
+    //Recuperando os 2 campos do formulário de login e imprimir no console:
+    const email = document.getElementById("idEmail");
+    const senha = document.getElementById("idSenha");
+
+    //Imprimindo o valor dos campos em tela.
+    console.log(email.value);
+    console.log(senha.value);
+
+    //Vamos comparar os dados digitados no formulário com os dados do objeto "usuario" e caso seja valido, redirecionar para a página index.html.
+
+//Refatorar a validação de usuários para que ao invés de comparar o email e a senha contra um único usuário, comparar com uma lista de usuários.
+//Para isso, você deve criar um array com objetos contendo os dados do usuário.
+
+
+    if (!(email === null && senha === null)) {
+      if (email.value === usuario.email && senha.value === usuario.senha) {
+        window.location.href = "./index.html";
+      } else {
+        throw new Error("Nome de usuário ou senha incorretos!");
+      }
+    } else {
+      throw new Error("Preencha os campos corretamente!");
+    }
+
+  } catch (error) {
+    alert(error.message);
+  }
+});
