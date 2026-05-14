@@ -243,77 +243,56 @@
     senha: "123456",
   },
   {
-    nome: "Maria",
-    email: "maria@gmail.com",
+    nome: "Mariana",
+    email: "mariana@gmail.com",
     senha: "abc123",
   },
   {
-    nome: "João",
-    email: "joao@gmail.com",
-    senha: "joao2024",
+    nome: "Rafael",
+    email: "rafael@gmail.com",
+    senha: "senha789",
   },
   {
-    nome: "Ana",
-    email: "ana@gmail.com",
-    senha: "senhaAna",
-  },
-  {
-    nome: "Carlos",
-    email: "carlos@gmail.com",
-    senha: "carlos123",
-  },
-  {
-    nome: "Fernanda",
-    email: "fernanda@gmail.com",
-    senha: "fernanda456",
+    nome: "Beatriz",
+    email: "beatriz@gmail.com",
+    senha: "bia2024",
   },
   {
     nome: "Lucas",
     email: "lucas@gmail.com",
-    senha: "lucas789",
+    senha: "lucas321",
   },
   {
-    nome: "Patricia",
-    email: "patricia@gmail.com",
-    senha: "paty321",
+    nome: "Camila",
+    email: "camila@gmail.com",
+    senha: "cami456",
   },
   {
-    nome: "Ricardo",
-    email: "ricardo@gmail.com",
-    senha: "rico654",
+    nome: "Thiago",
+    email: "thiago@gmail.com",
+    senha: "thi987",
   },
   {
     nome: "Juliana",
     email: "juliana@gmail.com",
-    senha: "juju987",
+    senha: "ju12345",
+  },
+  {
+    nome: "Bruno",
+    email: "bruno@gmail.com",
+    senha: "bru2025",
+  },
+  {
+    nome: "Fernanda",
+    email: "fernanda@gmail.com",
+    senha: "12345",
   },
 ];
 
-//  // Montando array
-//  const arrayDeCoisas = ["Saab", "Volvo", "BMW", 1, null, {nome:"Ale",idade:50}];
-//      console.log(arrayDeCoisas);
-//      console.log(arrayDeCoisas);
-
-//      console.log(arrayDeCoisas[0]);
-//      console.log(arrayDeCoisas[1]);
-//      console.log(arrayDeCoisas[2]);
-//      console.log(arrayDeCoisas[3]);
-//      console.log(arrayDeCoisas[4]);
-//      console.log(arrayDeCoisas[5]);
-//      console.log(arrayDeCoisas[5].nome);
-//      console.log(arrayDeCoisas[5].idade);
-
-// // //Imprimindo um objeto
-//      console.log(usuario);
-//      console.log(usuario.nome);
-//      console.log(usuario.email);
-//      console.log(usuario.senha);
-
-
-
+//Recuperando o botão entrar
 // const botaoEntrar = document.getElementById("btnEntrar");
-const botaoEntrar = document.querySelector("button[type='submit']");
 
+const botaoEntrar = document.querySelector("button[type='submit']");
 
 //Atrelar ao botão um evento
 //Vamos utilizar uma função que escuta eventos.
@@ -324,42 +303,43 @@ const botaoEntrar = document.querySelector("button[type='submit']");
 
 //Ex: botaoEntrar.addEventListener("click", function(){ Coisas aqui dentro da função para serem executadas quando o botão for clicado. });
 
-botaoEntrar.addEventListener("click", function (evento) {
+botaoEntrar.addEventListener("click", (evento)=> {
+
   evento.preventDefault();
 
-    try{
-        // Recuperando os 2 campos do formulário de login e imprimir no console:
-        const email = document.getElementById("idEmail");
-        const senha = document.getElementById("idSenha");
-        // Imprimindo o valor dos campos em tela.
-        console.log(email.value);
-        console.log(senha.value);
-        //Vamos comparar os dados digitados no formulário com os dados do objeto "usuario" e caso seja valido, redirecionar para a página index.html.
+  try {
+    //Recuperando os 2 campos do formulário de login e adicionando em um objeto:
+    const email = document.getElementById("idEmail");
+    const senha = document.getElementById("idSenha");
 
-        //Refatorar a validação de usuários para que ao invés de comparar o email e a senha contra um único usuário, comparar com uma lista de usuários.
-        //Para isso, você deve criar um array com objetos contendo os dados do usuário.
+    // criando um objeto dadosForm:
 
-        if (usuarios) {
+  const dadosForm = {
+    email: email.value,
+    senha: senha.value,
+  };
 
-      for (let x = 0; x < usuarios.length ; x++) {
-        
-        console.log( usuarios[x].nome , usuarios[x].email);
-        
+    let isValid = false;
+
+    if (usuarios) {
+      
+      for (let x = 0; x < usuarios.length; x++) {        
+        if ((dadosForm.email === usuarios[x].email) && (dadosForm.senha === usuarios[x].senha)) {
+          alert("Login realizado com sucesso!");      
+          window.location.href = "./index.html";
+          isValid = true;
+          break;
+        }
       }
 
-      if ( (email.value === usuario[x].email) && (senha.value === usuario[x].senha)) {
-        window.location.href = "../index.html";
-      } else {
-        throw new Error("Nome de usuário ou senha incorretos!");
+      if (isValid){
+        throw new Error("Email ou senha incorretos!");
       }
-
 
     } else {
       throw new Error("Preencha os campos corretamente!");
-    }
-
-
+    };
   } catch (error) {
     alert(error.message);
   }
-}); 
+});
