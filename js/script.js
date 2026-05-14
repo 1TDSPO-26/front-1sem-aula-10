@@ -1,61 +1,141 @@
-//Montando um objeto para comparar com os dados do formulário
-const usuario = {
-    nome : "Zezinho", 
-    email : "zezinho@gmail.com.br",
-    senha : "zezinho123"
-}
+// //Montando um objeto para comparar com os dados do formulário
+// const usuario = {
+//   nome: "Zezinho",
+//   email: "zezinho@gmail.com",
+//   senha: "123456",
+// };
 
+// //Criando uma lista de objetos para comparar com os dados do formulário:
+// const arrayDeCoisas = ["Saab", "Volvo", "BMW", 1, null, {nome:"Ale",idade:50}];
+// console.log(arrayDeCoisas);
 
+// console.log(arrayDeCoisas[0]);
+// console.log(arrayDeCoisas[1]);
+// console.log(arrayDeCoisas[2]);
+// console.log(arrayDeCoisas[3]);
+// console.log(arrayDeCoisas[4]);
+// console.log(arrayDeCoisas[5]);
+// console.log(arrayDeCoisas[5].nome);
+// console.log(arrayDeCoisas[5].idade);
+
+// //Imprimindo um objeto
+// console.log(usuario);
+// console.log(usuario.nome);
+// console.log(usuario.email);
+// console.log(usuario.senha);
+
+//lista de usuários:
+
+const usuarios = [
+    {
+        nome: "Zezinho",
+        email: "zezinho@gmail.com",
+        senha: "12345",
+    },
+    {
+        nome: "Mariana",
+        email: "mariana@gmail.com",
+        senha: "12345",
+    },
+    {
+        nome: "Rafael",
+        email: "rafael@gmail.com",
+        senha: "senha789",
+    },
+    {
+        nome: "Beatriz",
+        email: "beatriz@gmail.com",
+        senha: "bia2024",
+    },
+    {
+        nome: "Lucas",
+        email: "lucas@gmail.com",
+        senha: "lucas321",
+    },
+    {
+        nome: "Camila",
+        email: "camila@gmail.com",
+        senha: "cami456",
+    },
+    {
+        nome: "Thiago",
+        email: "thiago@gmail.com",
+        senha: "thi987",
+    },
+    {
+        nome: "Juliana",
+        email: "juliana@gmail.com",
+        senha: "ju12345",
+    },
+    {
+        nome: "Bruno",
+        email: "bruno@gmail.com",
+        senha: "bru2025",
+    },
+    {
+        nome: "Fernanda",
+        email: "fernanda@gmail.com",
+        senha: "12345",
+    },
+];
 
 //Recuperando o botão entrar
-const botaoEntrar = document.getElementById("btnEntrar");
+// const botaoEntrar = document.getElementById("btnEntrar");
 
+const botaoEntrar = document.querySelector("button[type='submit']");
 
 //Atrelar ao botão um evento
 //Vamos utilizar uma função que escuta eventos.
-//Essa função se chama addEventListeener(param1, param2) e recebe dois parâmetros:
+//Essa função se chama addEventListener(param1, param2) e recebe dois parâmetros:
 //O primeiro é o evento em si (click ou outro qualquer).
 //O segundo é a função, que pode ser uma função anônima ou uma função declarada.
 //Que será executada quando esse evento acontecer.
 
 //Ex: botaoEntrar.addEventListener("click", function(){ Coisas aqui dentro da função para serem executadas quando o botão for clicado. });
 
-botaoEntrar.addEventListener("click", function(evento){
+botaoEntrar.addEventListener("click", (evento) => {
+
     evento.preventDefault();
 
+    try {
+        //Recuperando os 2 campos do formulário de login e adicionando em um objeto:
+        const email = document.getElementById("idEmail");
+        const senha = document.getElementById("idSenha");
+
+        //Criar o objeto dadosForm:
+        const dadosForm = {
+            email: email.value,
+            senha: senha.value,
+        };
+
+        let isValid = false;
+
+        if (usuarios) {
+
+            for (let x = 0; x < usuarios.length; x++) {
+
+                console.log("USER EMAIL : " + usuarios[x].email);
+                console.log("USER SENHA : " + usuarios[x].senha);
+                console.log("FORM EMAIL : " + dadosForm.email);
+                console.log("FORM SENHA : " + dadosForm.senha);
 
 
-try {
+                if ((dadosForm.email === usuarios[x].email) && (dadosForm.senha === usuarios[x].senha)) {
+                    alert("Login realizado com sucesso!");
+                    window.location.href = "../index.html";
+                    isValid = true;
+                    break;
+                }
+            }
 
-  //Recuperando os 2 campos do formulário de login e impirmir no console:    
-const campoEmail = document.getElementById("idEmail");
-const campoSenha = document.getElementById("idSenha");
-    //Imprimindo o valor dos campos em tela
-console.log(campoEmail.value);
-console.log(campoSenha.value);
+            if (!isValid) {
+                throw new Error("Email ou senha incorretos!");
+            }
 
-//Vamos comparar os dados digitados no formulário com os dados do objeto "usuario" e caso seja valido, redirecionar para a página index.html.
-    
-if(!(campoEmail === null && campoSenha === null )){
-    if(campoEmail.valeu === usuario.campoEmail && campoSenha.valeu === usuario.campoSenha){
-        window.location.href = "./index.html";
-    }else{
-        throw new Error("Preencha os campos corretamente!");
+        } else {
+            throw new Error("Preencha os campos corretamente!");
+        }
+    } catch (error) {
+        alert(error.message);
     }
-}
-
-
-} catch (error){
-
-
-}
 });
-
-
-//Exemplo de função
-//function nomeDaFuncao() {
-  //  console.log("Olla");
-    //return "Olá";
-//}
-
-//nomeDaFuncao();
