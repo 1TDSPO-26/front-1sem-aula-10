@@ -93,31 +93,38 @@ const botaoEntrar = document.querySelector("button[type='submit']");
 
 //Ex: botaoEntrar.addEventListener("click", function(){ Coisas aqui dentro da função para serem executadas quando o botão for clicado. });
 
-botaoEntrar.addEventListener("click", function (evento) {
+botaoEntrar.addEventListener("click", (evento)=> {
+
   evento.preventDefault();
 
   try {
-    //Recuperando os 2 campos do formulário de login e imprimir no console:
+    //Recuperando os 2 campos do formulário de login e adicionando em um objeto:
     const email = document.getElementById("idEmail");
     const senha = document.getElementById("idSenha");
 
-    //Imprimindo o valor dos campos em tela.
-    console.log(email.value);
-    console.log(senha.value);
+    //Criar o objeto dadosForm
+    const dadosForm = {
+      email: email.value,
+      senha: senha.value,
+    };
+
+    let isValid = false;
 
     if (usuarios) {
       
       for (let x = 0; x < usuarios.length; x++) {
-        
-        if ((email.value === usuarios[x].email) && (senha.value === usuarios[x].senha)) {
+
+        if ((dadosForm.email === usuarios[x].email) && (dadosForm.senha === usuarios[x].senha)) {
           alert("Login realizado com sucesso!");      
           window.location.href = "../index.html";
-        } else {
-          throw new Error("Nome de usuário ou senha incorretos!");
+          break;
         }
-
       }
 
+      if (!isValid) {
+      throw new Error("Nome de usuário ou senha incorretos!");
+      }
+      
     } else {
       throw new Error("Preencha os campos corretamente!");
     }
