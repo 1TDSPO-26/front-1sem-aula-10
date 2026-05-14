@@ -30,12 +30,12 @@ const usuarios = [
   {
     nome: "Zezinho",
     email: "zezinho@gmail.com",
-    senha: "123456",
+    senha: "12345",
   },
   {
     nome: "Mariana",
     email: "mariana@gmail.com",
-    senha: "abc123",
+    senha: "12345",
   },
   {
     nome: "Rafael",
@@ -75,7 +75,7 @@ const usuarios = [
   {
     nome: "Fernanda",
     email: "fernanda@gmail.com",
-    senha: "fer0987",
+    senha: "12345",
   },
 ];
 
@@ -93,29 +93,35 @@ const botaoEntrar = document.querySelector("button[type='submit']");
 
 //Ex: botaoEntrar.addEventListener("click", function(){ Coisas aqui dentro da função para serem executadas quando o botão for clicado. });
 
-botaoEntrar.addEventListener("click", function (evento) {
+botaoEntrar.addEventListener("click", (evento) => {
   evento.preventDefault();
 
   try {
-    //Recuperando os 2 campos do formulário de login e imprimir no console:
+    //Recuperando os 2 campos do formulário de login e adicionando em um objeto:
     const email = document.getElementById("idEmail");
     const senha = document.getElementById("idSenha");
 
-    //Imprimindo o valor dos campos em tela.
-    console.log(email.value);
-    console.log(senha.value);
+    //Criar o objeto dadosForm:
+    const dadosForm = {
+      email: email.value,
+      senha: senha.value,
+    };
+
+    let isValid = false;
 
     if (usuarios) {
-      
       for (let x = 0; x < usuarios.length; x++) {
-        
-        if ((email.value === usuarios[x].email) && (senha.value === usuarios[x].senha)) {
-          alert("Login realizado com sucesso!");      
+        if (
+          dadosForm.email === usuarios[x].email && dadosForm.senha === usuarios[x].senha) {
+          alert("Login realizado com sucesso!");
           window.location.href = "../index.html";
-        } else {
-          throw new Error("Nome de usuário ou senha incorretos!");
+          isValid = true;
+          break;
         }
+      }
 
+      if (!isValid) {
+        throw new Error("Email ou senha incorretos!");
       }
 
     } else {
@@ -124,4 +130,6 @@ botaoEntrar.addEventListener("click", function (evento) {
   } catch (error) {
     alert(error.message);
   }
+
+
 });
