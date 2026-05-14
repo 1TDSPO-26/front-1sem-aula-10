@@ -1,7 +1,15 @@
+<<<<<<< HEAD
 .main-sections {
+=======
+.main-sections{
+>>>>>>> main
     width: 100%;
     background-color: #1a1b1c;
     color: #e0e0e0;
     display: grid;
+<<<<<<< HEAD
     grid-template-columns: repeat(3, 1fr);
+=======
+    grid-template-columns: repeat(3, 1fr);    
+>>>>>>> main
 }

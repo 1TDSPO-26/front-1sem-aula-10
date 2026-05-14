@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .hero {
     background-color: var(--bg-dark-med);
     color: var(--text-main);
@@ -9,26 +10,51 @@
     width: 100%;
     height: 100%;
     background-image: linear-gradient(rgba(16,16,16,0.775)), url(../img/img-01-fundo-hero.jpg);
+=======
+.hero{
+    background-color: var(--bg-dark-med);
+    color: var(--text-main);
+    width: 100%;
+    height: 100vh;
+}
+
+.hero__container{
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(rgba(16, 16, 16, 0.775)), url("../img/img-01-fundo-hero.jpg");
+>>>>>>> main
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     padding: 1rem 3rem;
 }
 
+<<<<<<< HEAD
 .hero__title {
+=======
+.hero__title{
+>>>>>>> main
     text-align: center;
     font-size: 4rem;
     font-weight: 500;
 }
 
+<<<<<<< HEAD
 .hero__text {
+=======
+.hero__text{
+>>>>>>> main
     text-align: justify;
     line-height: 7rem;
     font-size: 3rem;
     font-weight: 300;
 }
 
+<<<<<<< HEAD
 .hero__btn {
+=======
+.hero__btn{
+>>>>>>> main
     display: block;
     background-color: var(--primary);
     width: auto;
@@ -38,5 +64,9 @@
     padding: 1rem;
     border-radius: 10px;
     margin: 0 auto;
+<<<<<<< HEAD
     border: 0.5rem solid #fff;
+=======
+    border: 0.2rem solid #fff;
+>>>>>>> main
 }
