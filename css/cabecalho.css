@@ -1,14 +1,6 @@
-<<<<<<< HEAD
-.cabecalho__ul {
-    display: flex;
-    justify-content: space-around;
-    margin: 1%;
-}
-=======
 .cabecalho__ul{
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     margin: 1%;
 }
->>>>>>> main

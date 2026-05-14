@@ -3,11 +3,6 @@
     padding: 0;
     box-sizing: border-box;
 }
-<<<<<<< HEAD
- 
-=======
-
->>>>>>> main
 body{
     font-family: Arial, sans-serif;
     width: 100vw;
@@ -15,52 +10,27 @@ body{
     background-color: #1a1b1c;
     color: #e0e0e0;
 }
-<<<<<<< HEAD
- 
-=======
-
->>>>>>> main
 .container{
     border: 1px solid #fff;
     width: 100%;
     height: 100%;
-<<<<<<< HEAD
- 
-=======
-
->>>>>>> main
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(4,1fr);
     justify-content: start;
     align-content: start;
 }
-<<<<<<< HEAD
- 
-=======
-
->>>>>>> main
 .header{
     background-color: beige;
     color: #1a1b1c;
     grid-column: 1 / 5;
     grid-row: 1 / 4;
 }
-<<<<<<< HEAD
- 
-=======
-
->>>>>>> main
 .main{
     grid-column: 1 /5;
     grid-row: 2 / 4;
     background-color: #556b2f;
 }
-<<<<<<< HEAD
- 
-=======
-
->>>>>>> main
 .footer{
     grid-column: 1 / 5;
     grid-row: 4 / 4;
