@@ -1,35 +1,88 @@
-//Montando um objeto para comparar com os dados do formulário
-const usuario = {
-  nome: "Zezinho",
-  email: "zezinho@gmail.com",
-  senha: "123456",
-};
+// //Montando um objeto para comparar com os dados do formulário
+// const usuario = {
+//   nome: "Zezinho",
+//   email: "zezinho@gmail.com",
+//   senha: "123456",
+// };
 
-//Criando uma lista de objetos para comparar com os dados do formulário:
-const arrayDeCoisas = ["Saab", "Volvo", "BMW", 1, null, {nome:"Ale",idade:50}];
-console.log(arrayDeCoisas);
+// //Criando uma lista de objetos para comparar com os dados do formulário:
+// const arrayDeCoisas = ["Saab", "Volvo", "BMW", 1, null, {nome:"Ale",idade:50}];
+// console.log(arrayDeCoisas);
 
-console.log(arrayDeCoisas[0]);
-console.log(arrayDeCoisas[1]);
-console.log(arrayDeCoisas[2]);
-console.log(arrayDeCoisas[3]);
-console.log(arrayDeCoisas[4]);
-console.log(arrayDeCoisas[5]);
-console.log(arrayDeCoisas[5].nome);
-console.log(arrayDeCoisas[5].idade);
+// console.log(arrayDeCoisas[0]);
+// console.log(arrayDeCoisas[1]);
+// console.log(arrayDeCoisas[2]);
+// console.log(arrayDeCoisas[3]);
+// console.log(arrayDeCoisas[4]);
+// console.log(arrayDeCoisas[5]);
+// console.log(arrayDeCoisas[5].nome);
+// console.log(arrayDeCoisas[5].idade);
 
-//Imprimindo um objeto
-console.log(usuario);
-console.log(usuario.nome);
-console.log(usuario.email);
-console.log(usuario.senha);
+// //Imprimindo um objeto
+// console.log(usuario);
+// console.log(usuario.nome);
+// console.log(usuario.email);
+// console.log(usuario.senha);
 
+//lista de usuários:
 
-
-
+const usuarios = [
+  {
+    nome: "Zezinho",
+    email: "zezinho@gmail.com",
+    senha: "123456",
+  },
+  {
+    nome: "Mariana",
+    email: "mariana@gmail.com",
+    senha: "abc123",
+  },
+  {
+    nome: "Rafael",
+    email: "rafael@gmail.com",
+    senha: "senha789",
+  },
+  {
+    nome: "Beatriz",
+    email: "beatriz@gmail.com",
+    senha: "bia2024",
+  },
+  {
+    nome: "Lucas",
+    email: "lucas@gmail.com",
+    senha: "lucas321",
+  },
+  {
+    nome: "Camila",
+    email: "camila@gmail.com",
+    senha: "cami456",
+  },
+  {
+    nome: "Thiago",
+    email: "thiago@gmail.com",
+    senha: "thi987",
+  },
+  {
+    nome: "Juliana",
+    email: "juliana@gmail.com",
+    senha: "ju12345",
+  },
+  {
+    nome: "Bruno",
+    email: "bruno@gmail.com",
+    senha: "bru2025",
+  },
+  {
+    nome: "Fernanda",
+    email: "fernanda@gmail.com",
+    senha: "fer0987",
+  },
+];
 
 //Recuperando o botão entrar
-const botaoEntrar = document.getElementById("btnEntrar");
+// const botaoEntrar = document.getElementById("btnEntrar");
+
+const botaoEntrar = document.querySelector("button[type='submit']");
 
 //Atrelar ao botão um evento
 //Vamos utilizar uma função que escuta eventos.
@@ -52,22 +105,22 @@ botaoEntrar.addEventListener("click", function (evento) {
     console.log(email.value);
     console.log(senha.value);
 
-    //Vamos comparar os dados digitados no formulário com os dados do objeto "usuario" e caso seja valido, redirecionar para a página index.html.
+    if (usuarios) {
+      
+      for (let x = 0; x < usuarios.length; x++) {
+        
+        if ((email.value === usuarios[x].email) && (senha.value === usuarios[x].senha)) {
+          alert("Login realizado com sucesso!");      
+          window.location.href = "../index.html";
+        } else {
+          throw new Error("Nome de usuário ou senha incorretos!");
+        }
 
-//Refatorar a validação de usuários para que ao invés de comparar o email e a senha contra um único usuário, comparar com uma lista de usuários.
-//Para isso, você deve criar um array com objetos contendo os dados do usuário.
-
-
-    if (!(email === null && senha === null)) {
-      if (email.value === usuario.email && senha.value === usuario.senha) {
-        window.location.href = "./index.html";
-      } else {
-        throw new Error("Nome de usuário ou senha incorretos!");
       }
+
     } else {
       throw new Error("Preencha os campos corretamente!");
     }
-
   } catch (error) {
     alert(error.message);
   }

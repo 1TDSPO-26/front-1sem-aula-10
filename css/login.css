@@ -5,3 +5,16 @@
 .form__input:invalid:not(:placeholder-shown) {
     border: 2px solid red;
 }
+
+
+/* 
+
+button{
+    background-color: aqua;
+} 
+    
+*/
+
+button[type="submit"]{
+    background-color: rgb(30, 0, 255);
+}
