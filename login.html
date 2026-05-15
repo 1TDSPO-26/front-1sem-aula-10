@@ -10,9 +10,8 @@
 
     <script src="./js/script.js" defer></script>
 
-
   </head>
-
+  
 <body>
   
   <header class="cabecalho">
@@ -30,15 +29,20 @@
       <div class="hero__container">
         <h1 class="hero__title">CONTROLE DE ACESSO</h1>
 
+        <dialog id="meuModal" >
+          <button aria-label="Fechar janela" id="fecharModal">X</button>
+          <div id="msg">TESTE</div>
+        </dialog>
+
         <form class="form" action="#" method="GET">
-            <fieldset class="form__fieldset">
+            <fieldset class="form__fieldset"> 
                 <div class="form__box">
                     <label class="form__label" for="idEmail">Email</label>
-                    <input class="form__input" type="email" name="email" id="idEmail" placeholder="Digite seu email" minlength="13" maxlength="150" required>
+                    <input class="form__input" type="email" name="email" id="idEmail" placeholder="Digite seu email" minlength="13" maxlength="150" required autocomplete="current-password">
                 </div>
-                 <div class="form__box">
+                 <div class="form__box"> 
                     <label class="form__label" for="idSenha">Senha</label>
-                    <input class="form__input" type="password" name="senha" id="idSenha" placeholder="Digite sua senha" minlength="5" maxlength="30" required  oninvalid="this.setCustomValidity(`Preencha o campo ${this.name} corretamente!`)">
+                    <input class="form__input" type="password" name="senha" id="idSenha" placeholder="Digite sua senha" minlength="5" maxlength="30" required autocomplete="current-password">
                 </div>
                 <div class="form__box">
                   <button class="form__btn" type="submit" id="btnEntrar">Entrar</button>
@@ -54,5 +58,6 @@
       <footer>
         <p>Todos os direitos reservados - ESPORTE TOTAL - &copy; - 2026</p>
       </footer>
+      
   </body>
 </html>
