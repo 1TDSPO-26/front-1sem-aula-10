@@ -312,34 +312,56 @@ botaoEntrar.addEventListener("click", (evento)=> {
     const email = document.getElementById("idEmail");
     const senha = document.getElementById("idSenha");
 
-    // criando um objeto dadosForm:
-
-  const dadosForm = {
-    email: email.value,
-    senha: senha.value,
-  };
+    //Criar o objeto dadosForm:
+    const dadosForm = {
+      email: email.value,
+      senha: senha.value,
+    };
 
     let isValid = false;
 
     if (usuarios) {
-      
-      for (let x = 0; x < usuarios.length; x++) {        
-        if ((dadosForm.email === usuarios[x].email) && (dadosForm.senha === usuarios[x].senha)) {
-          alert("Login realizado com sucesso!");      
-          window.location.href = "./index.html";
+      for (let x = 0; x < usuarios.length; x++) {
+        if (dadosForm.email === usuarios[x].email && dadosForm.senha === usuarios[x].senha) {
+            
+          const modal = document.getElementById("meuModal");
+          modal.showModal();
+
+          const botaoFecharModal = document.getElementById("fecharModal");
+          botaoFecharModal.addEventListener("click", ()=>{
+            modal.close();
+          });
+
+          const divMsg = document.getElementById("msg");
+          divMsg.innerHTML = "<h2>Login realizado com sucesso!</h2><p>Você será redirecionado em 5 segundos...</p>";
+
+          let contador = 5;
+
+          const intervalo = setInterval( ()=>{
+            contador--;
+            divMsg.innerHTML = `<h2>Login realizado com sucesso!</h2><p>Você será redirecionado em ${contador} segundos...</p>`;
+            
+            if (contador === 0) {
+              clearInterval(intervalo);
+              window.location.href = "../index.html"
+            }
+
+          },1000);
+
+          ;
           isValid = true;
           break;
         }
       }
 
-      if (isValid){
+      if (!isValid) {
         throw new Error("Email ou senha incorretos!");
       }
 
     } else {
       throw new Error("Preencha os campos corretamente!");
-    };
-  } catch (error) {
+    } catch (error) {
     alert(error.message);
   }
-});
+
+  }
