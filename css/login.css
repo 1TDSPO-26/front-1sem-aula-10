@@ -15,6 +15,28 @@ button{
     
 */
 
-button[type="submit"]{
-    background-color: rgb(30, 0, 255);
+#meuModal{
+    width: 80%;
+    height: 30%;
+    margin: 0 auto;
+    background-color: #6eb06e;
+    color: #046404;
+    font-size: 4rem;
+    text-align: center;
+    border-radius: 5px;
+    position: relative;
+}
+
+#fecharModal{
+    position: absolute;
+    right: 0.8rem;
+    top:0.8rem;
+    border-radius: 50%;
+    width: 4.8rem;
+    height: 4.8rem;
+    border: 3px solid #046404;
+    background-color: #6eb06e;
+    color: #046404;
+    cursor: pointer;
+
 }
