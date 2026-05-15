@@ -111,10 +111,33 @@ botaoEntrar.addEventListener("click", (evento) => {
 
     if (usuarios) {
       for (let x = 0; x < usuarios.length; x++) {
-        if (
-          dadosForm.email === usuarios[x].email && dadosForm.senha === usuarios[x].senha) {
-          alert("Login realizado com sucesso!");
-          window.location.href = "../index.html";
+        if (dadosForm.email === usuarios[x].email && dadosForm.senha === usuarios[x].senha) {
+            
+          const modal = document.getElementById("meuModal");
+          modal.showModal();
+
+          const botaoFecharModal = document.getElementById("fecharModal");
+          botaoFecharModal.addEventListener("click", ()=>{
+            modal.close();
+          });
+
+          const divMsg = document.getElementById("msg");
+          divMsg.innerHTML = "<h2>Login realizado com sucesso!</h2><p>Você será redirecionado em 5 segundos...</p>";
+
+          let contador = 5;
+
+          const intervalo = setInterval( ()=>{
+            contador--;
+            divMsg.innerHTML = `<h2>Login realizado com sucesso!</h2><p>Você será redirecionado em ${contador} segundos...</p>`;
+            
+            if (contador === 0) {
+              clearInterval(intervalo);
+              window.location.href = "../index.html"
+            }
+
+          },1000);
+
+          ;
           isValid = true;
           break;
         }
@@ -131,5 +154,7 @@ botaoEntrar.addEventListener("click", (evento) => {
     alert(error.message);
   }
 
-
 });
+
+
+//Tentem reaproveitar a MSG do MODAL e apliquem na msg de ERRO!
